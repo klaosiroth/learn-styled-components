@@ -7,6 +7,11 @@ const StyledIcon = styled.div`
     else if (statusColor === 'go') return 'green';
     else return 'red';
   }};
+
+  &:hover {
+    background-color: grey;
+  }
+
   width: 30px;
   height: 30px;
   border-radius: 15px;
