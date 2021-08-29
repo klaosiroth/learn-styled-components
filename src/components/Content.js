@@ -36,8 +36,8 @@ const Content = () => {
       <SubTitle>I am a subtitle</SubTitle>
       <Button primary text="me first" />
       <Button text="me second" />
-      <Icon primary border='solid 3px' />
-      <Icon />
+      <Icon border='solid 3px' statusColor={'ready'} />
+      <Icon status={'in-progress'} />
       <ParagraphTitle as={ReversedTitle}>I am a paragraph</ParagraphTitle>
     </Section>
   )
