@@ -22,6 +22,13 @@ const ParagraphTitle = styled(SubTitle)`
   color: grey;
 `;
 
+const ReversedTitle = (props) => (
+  <ParagraphTitle 
+    {...props} 
+    children={ props.children.split('').reverse().join('') } 
+  />
+);
+
 const Content = () => {
   return (
     <Section>
@@ -31,7 +38,7 @@ const Content = () => {
       <Button text="me second" />
       <Icon primary />
       <Icon />
-      <ParagraphTitle>I am a paragraph</ParagraphTitle>
+      <ParagraphTitle as={ReversedTitle}>I am a paragraph</ParagraphTitle>
     </Section>
   )
 }
