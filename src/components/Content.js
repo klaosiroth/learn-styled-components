@@ -14,14 +14,24 @@ const Title = styled.h1`
   color: #aaecf0;
 `;
 
+const SubTitle = styled(Title)`
+  font-size: 14px;
+`;
+
+const ParagraphTitle = styled(SubTitle)`
+  color: grey;
+`;
+
 const Content = () => {
   return (
     <Section>
       <Title>💅🏻 Section</Title>
+      <SubTitle>I am a subtitle</SubTitle>
       <Button primary text="me first" />
       <Button text="me second" />
       <Icon primary />
       <Icon />
+      <ParagraphTitle>I am a paragraph</ParagraphTitle>
     </Section>
   )
 }
