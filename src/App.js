@@ -1,5 +1,6 @@
 import './App.css';
 import styled from 'styled-components';
+import Content from './components/Content';
 
 const Title = styled.h1`
   color: #b19cd9;
@@ -52,6 +53,8 @@ function App() {
           <WeekdayTitle>S</WeekdayTitle>
         </Section>
       </div>
+
+      <Content />
     </>
   );
 }
