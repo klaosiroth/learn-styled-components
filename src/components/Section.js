@@ -13,10 +13,10 @@ const StyledSection  = styled.section`
   color: #ff6961;
 `;
 
-const WeekdayTitle  = styled.section`
+const WeekdayTitle  = styled.div`
   display: flex;
   justify-content: center;
-  width: 50px;
+  min-width: 50px;
   border-right: solid 3px lightgrey;
 `;
 
@@ -28,7 +28,22 @@ const WeekendTitle = styled(WeekdayTitle)`
   border-radius: 7px 0 0 7px;
 `;
 
-const Section = ({ text }) => {
+// TO DO:
+// make a ProgressBar component
+// pass through a progress value
+// make width dependant on progress value
+// make color dependant on progress value
+const ProgressSection = styled.div`
+    width: 250px;
+`
+
+const ProgressBar = styled.div`
+  background-color: red;
+  height: 50px;
+  width: ${ ({progress}) => progress || '0%' };
+`
+
+const Section = ({ text, progress }) => {
 
   const isWeekend = text === "S";
 
@@ -36,6 +51,10 @@ const Section = ({ text }) => {
     <StyledSection>
       { !isWeekend && <WeekdayTitle>{text}</WeekdayTitle> }
       { isWeekend && <WeekendTitle>{text}</WeekendTitle> }
+
+      <ProgressSection>
+        <ProgressBar progress={progress} />
+      </ProgressSection>
     </StyledSection>
   )
 }
